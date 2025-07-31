@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Community Meetup",
+    "description": "Meet the community.",
+    "time": "2025-07-15T18:00:00+05:30",
+    "link": "https://meet.example.com/web3",
+    "linkText": "Join Session",
+    "icon": "globe"
+  },
+  {
+    "title": "Community Meetup",
+    "description": "Meet the community.",
+    "time": "2025-08-10T18:00:00+05:30",
+    "link": "https://meet.example.com/web3",
+    "linkText": "Join Session",
+    "icon": "globe"
+  }
+
+
+]
