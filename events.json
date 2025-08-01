@@ -14,6 +14,14 @@
     "link": "https://meet.example.com/web3",
     "linkText": "Join Session",
     "icon": "globe"
+  },
+  {
+    "title": "hardeniya meetup",
+    "description": "Meet the community.",
+    "time": "2025-08-10T18:00:00+05:30",
+    "link": "https://meet.example.com/web3",
+    "linkText": "Join Session",
+    "icon": "globe"
   }
 
 
