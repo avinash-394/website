@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Shield, Eye, Lock, Users, Database, Mail, AlertCircle, Calendar } from "lucide-react";
@@ -50,8 +48,6 @@ const Privacy = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -376,8 +372,6 @@ const Privacy = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };
