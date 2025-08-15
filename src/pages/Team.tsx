@@ -1,16 +1,4 @@
-/**
- * Team Component - Displays ZenYukti team members with social links
- * Features:
- * - Responsive grid layout for team member cards
- * - Interactive social media icons (GitHub, LinkedIn, Instagram, Discord)
- * - Smooth hover animations and transitions
- * - Modular structure for easy maintenance and scaling
- * - SEO-friendly markup with proper semantic HTML
- */
-
 import { useState } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import teamMembersk from "@/assets/teamdata/teamdata.json";
 import {
@@ -164,8 +152,6 @@ const Team = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 relative overflow-hidden">
@@ -674,8 +660,6 @@ const Team = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };

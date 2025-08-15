@@ -4,6 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route } from "react-router-dom";
 import { HashRouter } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -16,7 +18,6 @@ import NotFound from "./pages/NotFound";
 import Privacy from "./pages/Privacy";
 import CodeOfConduct from "./pages/CodeOfConduct";
 import TermsOfService from "./pages/TermsOfService";
-import CountdownGate from "./components/Countdown";
 
 const queryClient = new QueryClient();
 
@@ -26,7 +27,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <HashRouter>
-        <CountdownGate>
+      <Header /> 
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
@@ -47,7 +48,7 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </CountdownGate>
+          <Footer />
       </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
