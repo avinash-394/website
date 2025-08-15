@@ -22,11 +22,11 @@ const About = () => {
         "phase": "Community Soft Launch",
         "period": "July-August 2025",
         "description": "Officially opening doors to a wider audience and initiating initial community activities.",
-        "status": "upcoming"
+        "status": "completed"
       },
       {
         "phase": "Growth & Engagement Initiatives",
-        "period": "Q4 2025",
+        "period": "September Onwards 2025",
         "description": "Implementing programs, events, and resources to foster active participation and growth.",
         "status": "upcoming"
       },
