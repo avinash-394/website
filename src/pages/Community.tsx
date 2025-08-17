@@ -21,12 +21,12 @@ import { useEffect, useState } from "react";
 import EventCard from "@/components/EventCard";
 
 const carouselImages = [
-  "src/assets/teamImages/offline_meetup.jpg",
-  "src/assets/teamImages/online_meetup.png",
-  "src/assets/teamImages/candid_shot_1.jpg",
-  "src/assets/teamImages/candid_shot_2.jpg",
-  "src/assets/teamImages/team_side_profile.jpg",
-  "src/assets/teamImages/team_shot.jpg",
+  "/assets/teamImages/offline_meetup.jpg",
+  "/assets/teamImages/online_meetup.png",
+  "/assets/teamImages/candid_shot_1.jpg",
+  "/assets/teamImages/candid_shot_2.jpg",
+  "/assets/teamImages/team_side_profile.jpg",
+  "/assets/teamImages/team_shot.jpg",
 ];
 
 const Community = () => {
