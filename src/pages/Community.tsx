@@ -20,7 +20,7 @@ import EventCard from "@/components/EventCard";
 
 const carouselImages = [
   "/assets/teamImages/offline_meetup.jpg",
-  "/assets/teamImages/online_meetup.png",
+  "/assets/teamImages/online_meetu.jpeg",
   "/assets/teamImages/candid_shot_1.jpg",
   "/assets/teamImages/candid_shot_2.jpg",
   "/assets/teamImages/team_side_profile.jpg",
