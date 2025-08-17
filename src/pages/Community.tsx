@@ -123,7 +123,6 @@ const Community = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -381,8 +380,6 @@ const Community = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };
