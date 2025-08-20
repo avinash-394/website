@@ -20,7 +20,6 @@ import CodeOfConduct from "./pages/CodeOfConduct";
 import TermsOfService from "./pages/TermsOfService";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import CountdownGate from "./components/Countdown";
 import { AuthProvider } from "./contexts/AuthContext";
 
 const queryClient = new QueryClient();
@@ -32,7 +31,6 @@ const App = () => (
         <Toaster />
         <Sonner />
         <HashRouter>
-          <CountdownGate>
             <ScrollToTop />
             <Routes>
               <Route path="/" element={<Index />} />
@@ -53,7 +51,6 @@ const App = () => (
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
-          </CountdownGate>
         </HashRouter>
       </TooltipProvider>
     </AuthProvider>
