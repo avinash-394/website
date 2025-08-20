@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Eye, Heart,Code, Share2 } from "lucide-react";
 import { Users } from "@/components/icons";
@@ -22,11 +20,11 @@ const About = () => {
         "phase": "Community Soft Launch",
         "period": "July-August 2025",
         "description": "Officially opening doors to a wider audience and initiating initial community activities.",
-        "status": "upcoming"
+        "status": "completed"
       },
       {
         "phase": "Growth & Engagement Initiatives",
-        "period": "Q4 2025",
+        "period": "September Onwards 2025",
         "description": "Implementing programs, events, and resources to foster active participation and growth.",
         "status": "upcoming"
       },
@@ -52,8 +50,6 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      
       {/* Hero Section */}
       <section className="pt-24 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-dark"></div>
@@ -209,8 +205,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

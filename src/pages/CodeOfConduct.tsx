@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Users, Shield, Star, MessageCircle, AlertTriangle, Calendar, Mail, CheckCircle, XCircle } from "lucide-react";
@@ -132,8 +130,6 @@ const CodeOfConduct = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -508,8 +504,6 @@ const CodeOfConduct = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };

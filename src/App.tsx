@@ -4,6 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route } from "react-router-dom";
 import { HashRouter } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -46,9 +48,7 @@ const App = () => (
               <Route path="/termsofservice" element={<TermsOfService />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
-
               {/* Add any other custom routes here */}
-
               {/* Catch-all route for 404 Not Found */}
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
