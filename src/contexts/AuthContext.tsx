@@ -14,6 +14,8 @@ export interface AuthContextType {
   login: (email: string, password: string) => Promise<void>;
   signup: (name: string, email: string, password: string) => Promise<void>;
   logout: () => void;
+  updateProfile: (name: string, email: string) => Promise<void>;
+  resetPassword: (email: string) => Promise<void>;
   error: string | null;
   clearError: () => void;
 }
@@ -98,6 +100,50 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     localStorage.removeItem('auth_user');
   }, []);
 
+  const updateProfile = useCallback(async (name: string, email: string) => {
+    setIsLoading(true);
+    setError(null);
+    
+    try {
+      // Simulate API call - replace with actual backend call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      if (user) {
+        const updatedUser: User = {
+          ...user,
+          name,
+          email,
+        };
+        setUser(updatedUser);
+        localStorage.setItem('auth_user', JSON.stringify(updatedUser));
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Profile update failed');
+      throw err;
+    } finally {
+      setIsLoading(false);
+    }
+  }, [user]);
+
+  const resetPassword = useCallback(async (email: string) => {
+    setIsLoading(true);
+    setError(null);
+    
+    try {
+      // Simulate API call - replace with actual backend call
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      // In a real app, this would send an email
+      // For demo purposes, we'll just simulate success
+      console.log(`Password reset email would be sent to: ${email}`);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Password reset failed');
+      throw err;
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
   // Initialize user from localStorage on mount
   React.useEffect(() => {
     const storedUser = localStorage.getItem('auth_user');
@@ -117,6 +163,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     login,
     signup,
     logout,
+    updateProfile,
+    resetPassword,
     error,
     clearError,
   };

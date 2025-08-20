@@ -20,6 +20,8 @@ import CodeOfConduct from "./pages/CodeOfConduct";
 import TermsOfService from "./pages/TermsOfService";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Profile from "./pages/Profile";
+import ForgotPassword from "./pages/ForgotPassword";
 import { AuthProvider } from "./contexts/AuthContext";
 
 const queryClient = new QueryClient();
@@ -47,6 +49,8 @@ const App = () => (
               <Route path="/termsofservice" element={<TermsOfService />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
               {/* Add any other custom routes here */}
               {/* Catch-all route for 404 Not Found */}
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
