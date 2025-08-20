@@ -3,3 +3,8 @@ dist
 .env
 .vscode
 .DS_Store
+
+# Backend
+backend/node_modules
+backend/.env
+backend/uploads

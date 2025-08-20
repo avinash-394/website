@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { User, Mail, Save, Camera, ArrowLeft } from 'lucide-react';
+import { User, Mail, Save, Camera, ArrowLeft, Upload } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -30,9 +30,11 @@ type ProfileFormData = z.infer<typeof profileSchema>;
 
 const Profile = () => {
   const navigate = useNavigate();
-  const { user, isAuthenticated, updateProfile, isLoading, error, clearError } = useAuth();
+  const { user, isAuthenticated, updateProfile, uploadAvatar, isLoading, error, clearError } = useAuth();
   const [isEditing, setIsEditing] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [avatarLoading, setAvatarLoading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const form = useForm<ProfileFormData>({
     resolver: zodResolver(profileSchema),
@@ -89,6 +91,51 @@ const Profile = () => {
     clearError();
   };
 
+  const handleAvatarClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    // Validate file type
+    const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp'];
+    if (!allowedTypes.includes(file.type)) {
+      setSuccessMessage(null);
+      clearError();
+      setTimeout(() => {
+        // Create a temporary error to show the message
+        const errorEvent = new Error('Invalid file type. Please upload a JPEG, PNG, GIF, or WebP image.');
+        console.error(errorEvent);
+      }, 100);
+      return;
+    }
+
+    // Validate file size (5MB)
+    const maxSize = 5 * 1024 * 1024;
+    if (file.size > maxSize) {
+      setSuccessMessage(null);
+      clearError();
+      setTimeout(() => {
+        const errorEvent = new Error('File size too large. Maximum size is 5MB.');
+        console.error(errorEvent);
+      }, 100);
+      return;
+    }
+
+    setAvatarLoading(true);
+    try {
+      await uploadAvatar(file);
+      setSuccessMessage('Avatar updated successfully!');
+      setTimeout(() => setSuccessMessage(null), 3000);
+    } catch (err) {
+      // Error is handled by the auth context
+    } finally {
+      setAvatarLoading(false);
+    }
+  };
+
   if (!isAuthenticated || !user) {
     return null;
   }
@@ -132,10 +179,22 @@ const Profile = () => {
                     variant="outline"
                     size="sm"
                     className="absolute -bottom-2 -right-2 h-8 w-8 rounded-full p-0"
-                    disabled
+                    onClick={handleAvatarClick}
+                    disabled={avatarLoading}
                   >
-                    <Camera className="h-3 w-3" />
+                    {avatarLoading ? (
+                      <div className="w-3 h-3 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                    ) : (
+                      <Camera className="h-3 w-3" />
+                    )}
                   </Button>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    onChange={handleFileChange}
+                  />
                 </div>
                 <div className="flex-1">
                   <CardTitle className="text-2xl font-bold text-foreground">
@@ -144,6 +203,9 @@ const Profile = () => {
                   <CardDescription className="text-muted-foreground">
                     {user.email}
                   </CardDescription>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    Click the camera icon to upload a new profile picture
+                  </p>
                 </div>
                 {!isEditing && (
                   <Button
@@ -254,13 +316,17 @@ const Profile = () => {
                   <h3 className="text-lg font-semibold text-foreground mb-4">Account Information</h3>
                   <div className="space-y-3 text-sm text-muted-foreground">
                     <div>
-                      <span className="font-medium">Member since:</span> {new Date().toLocaleDateString()}
+                      <span className="font-medium">Member since:</span>{' '}
+                      {user.createdAt ? new Date(user.createdAt).toLocaleDateString() : new Date().toLocaleDateString()}
                     </div>
                     <div>
                       <span className="font-medium">Account Status:</span> Active
                     </div>
                     <div>
-                      <span className="font-medium">User ID:</span> {user.id}
+                      <span className="font-medium">User ID:</span> {user._id}
+                    </div>
+                    <div>
+                      <span className="font-medium">Role:</span> {user.role || 'User'}
                     </div>
                   </div>
                 </div>

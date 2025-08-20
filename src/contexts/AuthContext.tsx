@@ -1,10 +1,14 @@
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { authAPI, getAvatarUrl } from '@/lib/api';
 
 export interface User {
-  id: string;
+  _id: string;
   email: string;
   name: string;
   avatar?: string;
+  role?: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 export interface AuthContextType {
@@ -15,6 +19,7 @@ export interface AuthContextType {
   signup: (name: string, email: string, password: string) => Promise<void>;
   logout: () => void;
   updateProfile: (name: string, email: string) => Promise<void>;
+  uploadAvatar: (file: File) => Promise<void>;
   resetPassword: (email: string) => Promise<void>;
   error: string | null;
   clearError: () => void;
@@ -48,24 +53,18 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setError(null);
     
     try {
-      // Simulate API call - replace with actual backend call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await authAPI.login(email, password);
+      const userData = response.data.user;
       
-      // Mock validation
-      if (email === 'user@example.com' && password === 'password123') {
-        const mockUser: User = {
-          id: '1',
-          email,
-          name: 'John Doe',
-          avatar: 'https://github.com/shadcn.png'
-        };
-        setUser(mockUser);
-        localStorage.setItem('auth_user', JSON.stringify(mockUser));
-      } else {
-        throw new Error('Invalid email or password');
+      // Ensure avatar URL is absolute
+      if (userData.avatar) {
+        userData.avatar = getAvatarUrl(userData.avatar);
       }
+      
+      setUser(userData);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Login failed');
+      throw err;
     } finally {
       setIsLoading(false);
     }
@@ -76,28 +75,26 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setError(null);
     
     try {
-      // Simulate API call - replace with actual backend call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await authAPI.signup(name, email, password);
+      const userData = response.data.user;
       
-      // Mock user creation
-      const mockUser: User = {
-        id: Date.now().toString(),
-        email,
-        name,
-        avatar: 'https://github.com/shadcn.png'
-      };
-      setUser(mockUser);
-      localStorage.setItem('auth_user', JSON.stringify(mockUser));
+      // Ensure avatar URL is absolute
+      if (userData.avatar) {
+        userData.avatar = getAvatarUrl(userData.avatar);
+      }
+      
+      setUser(userData);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Signup failed');
+      throw err;
     } finally {
       setIsLoading(false);
     }
   }, []);
 
   const logout = useCallback(() => {
+    authAPI.logout();
     setUser(null);
-    localStorage.removeItem('auth_user');
   }, []);
 
   const updateProfile = useCallback(async (name: string, email: string) => {
@@ -105,37 +102,51 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setError(null);
     
     try {
-      // Simulate API call - replace with actual backend call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await authAPI.updateProfile(name, email);
+      const userData = response.data.user;
       
-      if (user) {
-        const updatedUser: User = {
-          ...user,
-          name,
-          email,
-        };
-        setUser(updatedUser);
-        localStorage.setItem('auth_user', JSON.stringify(updatedUser));
+      // Ensure avatar URL is absolute
+      if (userData.avatar) {
+        userData.avatar = getAvatarUrl(userData.avatar);
       }
+      
+      setUser(userData);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Profile update failed');
       throw err;
     } finally {
       setIsLoading(false);
     }
-  }, [user]);
+  }, []);
+
+  const uploadAvatar = useCallback(async (file: File) => {
+    setIsLoading(true);
+    setError(null);
+    
+    try {
+      const response = await authAPI.uploadAvatar(file);
+      const userData = response.data.user;
+      
+      // Ensure avatar URL is absolute
+      if (userData.avatar) {
+        userData.avatar = getAvatarUrl(userData.avatar);
+      }
+      
+      setUser(userData);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Avatar upload failed');
+      throw err;
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
 
   const resetPassword = useCallback(async (email: string) => {
     setIsLoading(true);
     setError(null);
     
     try {
-      // Simulate API call - replace with actual backend call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // In a real app, this would send an email
-      // For demo purposes, we'll just simulate success
-      console.log(`Password reset email would be sent to: ${email}`);
+      await authAPI.forgotPassword(email);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Password reset failed');
       throw err;
@@ -147,11 +158,35 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   // Initialize user from localStorage on mount
   React.useEffect(() => {
     const storedUser = localStorage.getItem('auth_user');
-    if (storedUser) {
+    const storedToken = localStorage.getItem('auth_token');
+    
+    if (storedUser && storedToken) {
       try {
-        setUser(JSON.parse(storedUser));
+        const userData = JSON.parse(storedUser);
+        
+        // Ensure avatar URL is absolute
+        if (userData.avatar) {
+          userData.avatar = getAvatarUrl(userData.avatar);
+        }
+        
+        setUser(userData);
+        
+        // Optionally verify the token with the backend
+        authAPI.getMe().then(response => {
+          const updatedUserData = response.data.user;
+          if (updatedUserData.avatar) {
+            updatedUserData.avatar = getAvatarUrl(updatedUserData.avatar);
+          }
+          setUser(updatedUserData);
+          localStorage.setItem('auth_user', JSON.stringify(updatedUserData));
+        }).catch(() => {
+          // Token is invalid, clear stored data
+          authAPI.logout();
+          setUser(null);
+        });
       } catch {
-        localStorage.removeItem('auth_user');
+        // Invalid stored data, clear it
+        authAPI.logout();
       }
     }
   }, []);
@@ -164,6 +199,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     signup,
     logout,
     updateProfile,
+    uploadAvatar,
     resetPassword,
     error,
     clearError,
