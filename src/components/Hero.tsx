@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Share2 } from "lucide-react";
 import { useEffect, useRef } from 'react';
-import { Discord , Github , Users , Code} from "./icons";
+import { Discord , Github , Users , Code, Whatsapp} from "./icons";
 
 const Hero = () => {
   const canvasRef = useRef(null);
@@ -374,11 +374,11 @@ const Hero = () => {
               className="border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white text-lg px-8 py-6 shadow-purple group"
             >
               <a
-              href="https://github.com/ZenYukti"
+              href="https://chat.whatsapp.com/HTwSFGYUNIb6m75IAzCxfk?mode=ac_t"
               target="_blank"
               rel="noopener noreferrer">
-              <Github className="w-5 h-5 mr-3" />
-              GitHub
+              <Whatsapp className="w-5 h-5 mr-3" />
+              WhatsApp
               <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
