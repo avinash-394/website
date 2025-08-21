@@ -9,7 +9,11 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist"
+    "deploy": "vite build && gh-pages -d dist",
+    "backend": "cd backend && npm run dev",
+    "backend:start": "cd backend && npm start",
+    "full-dev": "concurrently \"npm run backend\" \"npm run dev\"",
+    "install-backend": "cd backend && npm install"
   },
   "homepage": "https://zeenyukti.github.io/",
   "dependencies": {
@@ -72,6 +76,7 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
+    "concurrently": "^9.2.0",
     "eslint": "^9.9.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",

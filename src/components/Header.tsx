@@ -1,11 +1,21 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu} from "lucide-react";
+import { Menu, LogOut, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Discord , Github , Cross} from "./icons";
+import { useAuth } from "@/contexts/AuthContext";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user, isAuthenticated, logout } = useAuth();
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -80,6 +90,59 @@ const Header = () => {
                 GitHub
               </a>
             </Button>
+
+            {/* Auth Buttons */}
+            {isAuthenticated ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+                    <Avatar className="h-8 w-8">
+                      <AvatarImage src={user?.avatar} alt={user?.name} />
+                      <AvatarFallback className="bg-primary text-primary-foreground">
+                        {user?.name?.charAt(0).toUpperCase()}
+                      </AvatarFallback>
+                    </Avatar>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-56" align="end" forceMount>
+                  <div className="flex items-center justify-start gap-2 p-2">
+                    <div className="flex flex-col space-y-1 leading-none">
+                      <p className="font-medium">{user?.name}</p>
+                      <p className="w-[200px] truncate text-sm text-muted-foreground">
+                        {user?.email}
+                      </p>
+                    </div>
+                  </div>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem asChild>
+                    <Link to="/profile" className="cursor-pointer">
+                      <User className="mr-2 h-4 w-4" />
+                      Profile
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem
+                    className="cursor-pointer"
+                    onSelect={(event) => {
+                      event.preventDefault();
+                      logout();
+                    }}
+                  >
+                    <LogOut className="mr-2 h-4 w-4" />
+                    Log out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <div className="flex items-center space-x-2">
+                <Button asChild variant="ghost" size="sm">
+                  <Link to="/login">Log in</Link>
+                </Button>
+                <Button asChild size="sm" className="bg-gradient-primary hover:opacity-90">
+                  <Link to="/signup">Sign up</Link>
+                </Button>
+              </div>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -130,6 +193,60 @@ const Header = () => {
                 <Github className="w-4 h-4 mr-2" />
                 GitHub
               </Button>
+
+              {/* Mobile Auth Buttons */}
+              {isAuthenticated ? (
+                <div className="space-y-2 border-t border-border pt-2">
+                  <div className="px-4 py-2">
+                    <p className="font-medium text-foreground">{user?.name}</p>
+                    <p className="text-sm text-muted-foreground">{user?.email}</p>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="w-full justify-start"
+                    onClick={() => setIsOpen(false)}
+                    asChild
+                  >
+                    <Link to="/profile">
+                      <User className="mr-2 h-4 w-4" />
+                      Profile
+                    </Link>
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="w-full justify-start text-destructive hover:text-destructive"
+                    onClick={() => {
+                      logout();
+                      setIsOpen(false);
+                    }}
+                  >
+                    <LogOut className="mr-2 h-4 w-4" />
+                    Log out
+                  </Button>
+                </div>
+              ) : (
+                <div className="space-y-2 border-t border-border pt-2">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="w-full"
+                    onClick={() => setIsOpen(false)}
+                    asChild
+                  >
+                    <Link to="/login">Log in</Link>
+                  </Button>
+                  <Button
+                    size="sm"
+                    className="w-full bg-gradient-primary hover:opacity-90"
+                    onClick={() => setIsOpen(false)}
+                    asChild
+                  >
+                    <Link to="/signup">Sign up</Link>
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
         )}
