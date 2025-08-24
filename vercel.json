@@ -1,0 +1,12 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": ":sub.zenyukti.in" }],
+      "destination": "https://zenyukti.in/:path*",
+      "permanent": true
+    }
+  ]
+}
+
+// it is for redirecting subdomains to main domain, with any typos or something like- ww.zenyukti.in, ayush.zenyukti.in alllwill land on zenyukti.in
