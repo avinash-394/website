@@ -1,14 +1,14 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { ViteSitemap } from "vite-plugin-sitemap";
+import ViteSitemap from "vite-plugin-sitemap"; // ✅ default import, not named
 
 export default defineConfig({
-  base: "/", // required for general deployment / GitHub Pages
+  base: "/", // required for deployment
   plugins: [
     react(),
     ViteSitemap({
-      hostname: 'https://zenyukti.in', // main domain
+      hostname: 'https://zenyukti.in',
       routes: [
         { path: '/', changefreq: 'daily', priority: 1.0 },
         { path: '/about', changefreq: 'monthly', priority: 0.8 },
