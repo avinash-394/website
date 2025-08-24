@@ -1,2 +1,12 @@
-# Redirect all traffic to primary domain
-/*    https://zenyukti.in/:splat    301!
+# Redirect all traffic to primary domain with HTTPS
+# Netlify, including www subdomain and netlify.app domain
+#Previously tried /* to redirect all addresses to zenyukiti.in but it did not work as expected
+
+# Redirect netlify.app domain to primary domain
+https://zenyukti.netlify.app/*   https://zenyukti.in/:splat   301!
+
+# Redirect www subdomain to apex domain
+https://www.zenyukti.in/*        https://zenyukti.in/:splat   301!
+
+# Redirect all other HTTP traffic to HTTPS
+http://zenyukti.in/*              https://zenyukti.in/:splat   301!
