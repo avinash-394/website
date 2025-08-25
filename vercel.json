@@ -22,5 +22,8 @@
       "destination": "https://zenyukti.in/:path*",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
