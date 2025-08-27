@@ -674,8 +674,6 @@ const Team = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };
