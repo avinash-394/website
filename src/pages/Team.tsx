@@ -15,15 +15,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import teamMembersk from "@/assets/teamdata/teamdata.json";
 import {
   Users,
-  Discord,
   Linkedin,
   Github,
-  Instagram,
   Code,
   Heart,
-  Mail,
   X,
 } from "@/components/icons";
+import { Mail, Discord } from "@/components/icons";
+
 
 /**
  * Interface for team member data structure
@@ -73,72 +72,42 @@ const Team = () => {
    * @param member - The team member object
    * @returns Array of social link objects
    */
-  const getSocialLinks = (member: TeamMember): SocialLink[] => {
-    const links: SocialLink[] = [];
+const getSocialLinks = (member: TeamMember): SocialLink[] => {
+  const links: SocialLink[] = [];
 
-    // Email link (always present)
-    if (member.email) {
-      links.push({
-        platform: "Email",
-        url: `mailto:${member.email}`,
-        icon: Mail,
-        color: "text-blue-400 hover:text-blue-300",
-      });
-    }
+  // GitHub
+  if (member.github) {
+    links.push({
+      platform: "GitHub",
+      url: member.github,
+      icon: Github,
+      color: "text-gray-300 hover:text-white",
+    });
+  }
 
-    // GitHub link
-    if (member.github) {
-      links.push({
-        platform: "GitHub",
-        url: member.github,
-        icon: Github,
-        color: "text-gray-300 hover:text-white",
-      });
-    }
+  // LinkedIn
+  if (member.linkedin) {
+    links.push({
+      platform: "LinkedIn",
+      url: member.linkedin,
+      icon: Linkedin,
+      color: "text-blue-400 hover:text-blue-300",
+    });
+  }
 
-    // LinkedIn link
-    if (member.linkedin) {
-      links.push({
-        platform: "LinkedIn",
-        url: member.linkedin,
-        icon: Linkedin,
-        color: "text-blue-400 hover:text-blue-300",
-      });
-    }
+  // Twitter
+  if (member.twitter) {
+    links.push({
+      platform: "Twitter",
+      url: member.twitter,
+      icon: X,
+      color: "text-gray-200 hover:text-gray-100",
+    });
+  }
 
-    // Instagram link
-    if (member.instagram) {
-      links.push({
-        platform: "Instagram",
-        url: member.instagram,
-        icon: Instagram,
-        color: "text-pink-400 hover:text-pink-300",
-      });
-    }
+  return links;
+};
 
-    // Twitter link
-    if (member.twitter) {
-      links.push({
-        platform: "Twitter",
-        url: member.twitter,
-        icon: X,
-        color: "text-gray-200 hover:text-gray-100"
-      });
-    }
-
-
-    // Discord link
-    if (member.discord) {
-      links.push({
-        platform: "Discord",
-        url: member.discord,
-        icon: Discord,
-        color: "text-indigo-400 hover:text-indigo-300",
-      });
-    }
-
-    return links;
-  };
 
   /**
    * Handles image loading errors by setting fallback state
