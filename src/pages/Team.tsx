@@ -33,11 +33,8 @@ interface TeamMember {
   name: string;
   subname?: string;
   role?: string;
-  email: string;
   github?: string;
   linkedin?: string;
-  instagram?: string;
-  discord?: string;
   avatar?: string;
   bio?: string;
   isFounder?: boolean;
