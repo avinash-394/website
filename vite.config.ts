@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { VitePluginSitemap } from "vite-plugin-pages-sitemap";
+import VitePluginSitemap from "vite-plugin-pages-sitemap"; // default import
 
 export default defineConfig({
   base: "/",
