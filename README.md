@@ -406,15 +406,15 @@ Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information
 
 <div align="center">
 
-**Special Thanks To:**
+**Special Thanks To:** 
+
+</div>
 
 - 🙏 All [contributors](https://github.com/ZenYukti/zenyukti.github.io/contributors) who participated in this project
 - 💡 The open-source community for inspiration and resources
 - 🛠️ [Vite](https://vitejs.dev/) team for the amazing build tool
 - 🎨 [GitHub](https://github.com/) for hosting and CI/CD capabilities
 - 📚 [MDN Web Docs](https://developer.mozilla.org/) for comprehensive documentation
-
-</div>
 
 ---
 
