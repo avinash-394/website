@@ -1,10 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import VitePluginSitemap from "vite-plugin-pages-sitemap"; // default import
+import VitePluginSitemap from "vite-plugin-pages-sitemap";
+import { format } from "prettier"; // optional, for XML formatting
 
 export default defineConfig({
-  base: "/",
   plugins: [
     react(),
     VitePluginSitemap({
@@ -17,6 +17,8 @@ export default defineConfig({
         { path: "/join-us", changefreq: "weekly", priority: 0.7 },
         { path: "/team", changefreq: "monthly", priority: 0.8 },
       ],
+      // pretty format XML
+      xmlFormatter: (xml: string) => format(xml, { parser: "html" }),
     }),
   ],
   resolve: {
