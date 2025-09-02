@@ -18,7 +18,7 @@ const domains = [
     title: "Members",
     icon: Users,
     description: "Join our growing community of learners and builders. Connect, collaborate, and grow together.",
-    members: "600+",
+    members: "650+",
     skills: ["Learning Mindset", "Discussion", "Engagement", "Community Building"],
     color: "neon-green"
   },
@@ -26,7 +26,7 @@ const domains = [
     title: "Contributors",
     icon: HandHelping,
     description: "Collaborate on real-world projects, sharpen your skills, and grow your portfolio.",
-    members: "10+",
+    members: "20+",
     skills: ["Open Source Contribution", "Problem Solving", "Issue Tracking", "Testing & Debugging"],
     color: "neon-purple"
   },
