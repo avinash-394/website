@@ -224,7 +224,7 @@ const getSocialLinks = (member: TeamMember): SocialLink[] => {
                         <h3 className="text-2xl font-bold text-foreground mb-2">
                           {anvita.name}
                         </h3>
-                        <p className="text-lg text-primary mb-2">Co-founder & Creative Lead</p>
+                        <p className="text-lg text-primary mb-2">Co-founder & Creative Head</p>
                         <p className="text-muted-foreground mb-4"></p>
                         {anvita.bio && (
                           <p className="text-muted-foreground mb-6 italic">

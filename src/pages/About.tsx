@@ -50,6 +50,7 @@ const About = () => {
   ];
 
   return (
+    <>
     <Helmet>
         <title>About Us | ZenYukti</title>
         <meta name="description" content="Discover the story and mission of ZenYukti. Learn about our purpose, vision, and core values that drive our student-led tech community." />
@@ -218,6 +219,7 @@ const About = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
