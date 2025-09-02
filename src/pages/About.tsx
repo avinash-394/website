@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Eye, Heart,Code, Share2 } from "lucide-react";
 import { Users } from "@/components/icons";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   const timeline = [
@@ -49,6 +50,17 @@ const About = () => {
   ];
 
   return (
+    <Helmet>
+        <title>About Us | ZenYukti</title>
+        <meta name="description" content="Discover the story and mission of ZenYukti. Learn about our purpose, vision, and core values that drive our student-led tech community." />
+        <meta property="og:title" content="About ZenYukti: Our Purpose & Journey" />
+        <meta property="og:description" content="Learn about our commitment to democratizing tech education and fostering a collaborative community for students." />
+        <meta property="og:url" content="https://zenyukti.in/about" />
+        <meta property="og:image" content="" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://zenyukti.in/about" />
+      </Helmet>
+
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="pt-24 pb-16 relative overflow-hidden">

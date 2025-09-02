@@ -161,7 +161,7 @@ const getSocialLinks = (member: TeamMember): SocialLink[] => {
               <div className="text-center">
                 <div className="text-3xl font-bold text-neon-green mb-2">
                   {/*{teamMembers.length}*/} {/*Dynamic handler, don't remove it until our core team is small*/}
-                  10+
+                  20+
                 </div>
                 <div className="text-muted-foreground">Team Members</div>
               </div>
@@ -173,7 +173,7 @@ const getSocialLinks = (member: TeamMember): SocialLink[] => {
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-neon-blue mb-2">
-                  600+
+                  650+
                 </div>
                 <div className="text-muted-foreground">Community Members</div>
               </div>
@@ -355,7 +355,7 @@ const getSocialLinks = (member: TeamMember): SocialLink[] => {
                         <h3 className="text-2xl font-bold text-foreground mb-2">
                           {avinash.name}
                         </h3>
-                        <p className="text-lg text-primary mb-2">Co-founder & Ops Co-Lead</p>
+                        <p className="text-lg text-primary mb-2">Co-founder & Operations Head</p>
                         <p className="text-muted-foreground mb-4"></p>
                         {avinash.bio && (
                           <p className="text-muted-foreground mb-6 italic">
