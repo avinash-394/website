@@ -19,7 +19,7 @@
     "github": "https://github.com/ANVITA1126",
     "linkedin": "https://www.linkedin.com/in/anvita-shukla-96a396308",
     "bio": "Driven to innovate and inspire, fostering creativity at every step.",
-    "avatar": "/assets/anvita.jpeg",
+    "avatar": "/assets/profile/anvita.jpeg",
     "isFounder": false,
     "department": "ZenBoard"
   },
@@ -30,7 +30,7 @@
     "github": "https://github.com/avinash-394",
     "linkedin": "https://www.linkedin.com/in/avinashshukla394/",
     "bio": "Passionate about turning ideas into impact, building a thriving community.",
-    "avatar": "https://media.licdn.com/dms/image/v2/D5603AQG1nzHhYYAsVg/profile-displayphoto-shrink_200_200/B56ZUn3SSRHsAY-/0/1740130560580?e=1756339200&v=beta&t=wJEYH-H53UdZsDEWJEP0n94FXt02_BGdy53UDvLreDw",
+    "avatar": "./assets/profile/AvinashKumarShukla.jpg",
     "isFounder": false,
     "department": "ZenBoard"
   },
@@ -39,7 +39,7 @@
     "name": "Kaushal Sharma",
     "role": "Technical Co-Lead",
     "github": "https://github.com/Kaushal171205",
-    "avatar": "./assets/kaushal.jpg",
+    "avatar": "./assets/profile/kaushal.jpg",
     "linkedin": "https://www.linkedin.com/in/kaushal-sharma-4920ab2a2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BcUnOBArzRu%2BcoZuyy0xGGA%3D%3D",
     "isFounder": false,
     "department": "ZenCrew"
@@ -50,7 +50,7 @@
     "role": "Technical Co-Lead",
     "github": "https://github.com/ayushraaj-01",
     "linkedin": "https://www.linkedin.com/in/ayush-raj-3849a1335",
-    "avatar": "https://media.licdn.com/dms/image/v2/D5603AQE4BbHYOjtD6w/profile-displayphoto-shrink_200_200/B56ZcSx8bCG0AY-/0/1748366773137?e=1756339200&v=beta&t=recR-bW2CkaLXCGR2iz8VGDSxgtX-WNXo4lYvskaXsQ",
+    "avatar": "./assets/profile/ayushraj.jpg",
     "isFounder": false,
     "department": "ZenCrew"
   },
@@ -60,7 +60,7 @@
     "role": "Communication Lead",
     "github": "https://github.com/avishisharma08",
     "linkedin": "https://www.linkedin.com/in/avishi-sharma-12a2a2322",
-    "avatar": "https://media.licdn.com/dms/image/v2/D5603AQFKEvZS3Q1-DA/profile-displayphoto-scale_200_200/B56ZfBW7gqH8Ag-/0/1751295705968?e=1756339200&v=beta&t=LluMeTEacpzEHxi6Xj-VYEGYwZTOQ1ob3uS0LyDnY1w",
+    "avatar": "./assets/profile/avishi.jpg",
     "isFounder": false,
     "department": "ZenCrew"
   },
@@ -70,7 +70,7 @@
     "role": "Social Media Lead",
     "github": "https://github.com/Ayushukla7",
     "linkedin": "https://www.linkedin.com/in/ayush-shukla-844abb313",
-    "avatar": "https://media.licdn.com/dms/image/v2/D5603AQFk2C1HXbtTrQ/profile-displayphoto-scale_200_200/B56ZhVAJWIG0AY-/0/1753772761708?e=1756944000&v=beta&t=znCBABpHFTodCQzNGV6aVFd4TGbfSXZS9rP0BUn9BPc",
+    "avatar": "./assets/profile/AyushShukla.jpg",
     "isFounder": false,
     "department": "ZenCrew"
   },
@@ -80,7 +80,7 @@
     "role": "Production Lead",
     "github": "https://github.com/homiethissid3",
     "linkedin": "https://www.linkedin.com/in/mohd-abbas-84786920b",
-    "avatar": "https://media.licdn.com/dms/image/v2/D4D03AQGwj_sp7C8BVA/profile-displayphoto-shrink_200_200/B4DZahFcwkH0AY-/0/1746459284085?e=1756339200&v=beta&t=v9ioLYMoZBUOJwFTY3sr1DQ4D7l4pnmgmwWaTauDq4c",
+    "avatar": "./assets/profile/Mohd.Abbas.jpg",
     "isFounder": false,
     "department": "ZenCrew"
   },
@@ -90,7 +90,7 @@
     "role": "Systems Lead",
     "github": "https://github.com/TheAshutoshMishra",
     "linkedin": "https://www.linkedin.com/in/theashutoshmishra/",
-    "avatar": "https://media.licdn.com/dms/image/v2/D4D03AQFrCj8GZX97rg/profile-displayphoto-shrink_200_200/B4DZcSfhdnGcAc-/0/1748361948934?e=1756339200&v=beta&t=yQ2LrB0q7bMBBCE4wTKNSI0MLLTlFhwOY6WX7QRACM8",
+    "avatar": "./assets/profile/AshutoshMishra.webp",
     "isFounder": false,
     "department": "ZenCrew"
   },
@@ -100,7 +100,7 @@
     "role": "Technical Coordinator",
     "github": "https://github.com/justayushmani",
     "linkedin": "https://www.linkedin.com/in/ayush-mani-tiwari-b6369b344?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Byf3cKhiIQKKKdG7xdZGBTQ%3D%3D",
-    "avatar": "https://media.licdn.com/dms/image/v2/D5603AQGCTgbDxydcmQ/profile-displayphoto-shrink_200_200/B56ZVcuy8CGQAk-/0/1741017527249?e=1756944000&v=beta&t=YVSKh2LQMKtDzLQrZ8g5yHfGmjPKkx2gtk9EuKegY_s",
+    "avatar": "./assets/profile/AyushManiTiwari.jpg",
     "isFounder": false,
     "department": "ZenMates"
   },
@@ -109,7 +109,7 @@
     "name": "Ayush Kumar Pandey",
     "role": "Communication Coordinator",
     "linkedin": "https://www.linkedin.com/in/ayush-kumar-pandey-a6880532b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJQI9oOIqR9W7UuklpMKHWA%3D%3D",
-    "avatar": "https://media.licdn.com/dms/image/v2/D5603AQEZ7sFQS5IQWA/profile-displayphoto-scale_200_200/B56Zgi53mwHcAc-/0/1752932254158?e=1756944000&v=beta&t=m20xCSg7w7yd_kSedl0d8rKMr5xxAOAvfC4Aqz7OSy4",
+    "avatar": "./assets/profile/AyushkumarPandey.jpg",
     "isFounder": false,
     "department": "ZenMates"
   },
@@ -119,7 +119,7 @@
     "role": "Design Lead",
     "github": "",
     "linkedin": "https://www.linkedin.com/in/shresth-keshari-3b8997323?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BsnbkjztAQF6G%2Fncq7rk3Kg%3D%3D",
-    "avatar": "https://media.licdn.com/dms/image/v2/D4E03AQHAdGvEHwyr2w/profile-displayphoto-shrink_200_200/B4EZYLjg4bHMAc-/0/1743950582039?e=1756944000&v=beta&t=ysxT_9hGQVvX4GnhchKTtKOkPiX2AulMLhSoIC-PDws",
+    "avatar": "./assets/profile/Shresth.jpg",
     "isFounder": false,
     "department": "ZenCrew"
   },
@@ -129,7 +129,7 @@
     "role": "Design Coordinator",
     "github": "",
     "linkedin": "https://www.linkedin.com/in/anshika-singh-233302326",
-    "avatar": "/assets/anshika.jpg",
+    "avatar": "/assets/profile/AnshikaSingh.jpg",
     "isFounder": false,
     "department": "ZenMates"
   },
@@ -139,7 +139,7 @@
     "role": "Content Coordinator",
     "github": "",
     "linkedin": "https://www.linkedin.com/in/anshu-pathak-139837335",
-    "avatar": "/assets/anshu.jpg",
+    "avatar": "./assets/profile/Anshupathak.jpg",
     "isFounder": false,
     "department": "ZenMates"
   },
@@ -149,7 +149,7 @@
     "role": "Content Coordinator",
     "github": "https://github.com/deepraj-07",
     "linkedin": "https://linkedin.com/in/deep-raj-906804328/",
-    "avatar": "/assets/deep-raj.jpg",
+    "avatar": "./assets/profile/Deep_Raj.jpg",
     "isFounder": false,
     "department": "ZenMates"
   },
@@ -159,7 +159,7 @@
     "role": "Design Coordinator",
     "github": "https://github.com/Dheershikha123",
     "linkedin": "https://www.linkedin.com/in/dheershikha-janmejay-085367318",
-    "avatar": "/assets/dheershikha.jpg",
+    "avatar": "./assets/profile/dheershikha.jpg",
     "isFounder": false,
     "department": "ZenMates"
   },
@@ -169,7 +169,7 @@
     "role": "Design Coordinator",
     "github": "",
     "linkedin": "https://www.linkedin.com/in/ira-mal-a4b533347/",
-    "avatar": "/assets/ira-mal.jpg",
+    "avatar": "./assets/profile/Ira.jpg",
     "isFounder": false,
     "department": "ZenMates"
   },
@@ -179,7 +179,7 @@
     "role": "Design Coordinator",
     "github": "",
     "linkedin": "https://www.linkedin.com/in/jayantika-sharma-6a47b7337",
-    "avatar": "/assets/jayantika.jpg",
+    "avatar": "./assets/profile/jayantika.jpg",
     "isFounder": false,
     "department": "ZenMates"
   },
@@ -189,7 +189,7 @@
     "role": "Technical Coordinator",
     "github": "https://github.com/PriyatoshKumarShahi",
     "linkedin": "https://www.linkedin.com/in/priyatosh-kumar-767223325",
-    "avatar": "/assets/priyatosh.jpg",
+    "avatar": "./assets/profile/Priyatosh.jpg",
     "isFounder": false,
     "department": "ZenMates"
   },
@@ -200,7 +200,7 @@
     "email": "",
     "github": "https://github.com/TanyaVaish-17",
     "linkedin": "https://www.linkedin.com/in/tanya-vaish07/",
-    "avatar": "/assets/tanya.jpg",
+    "avatar": "./assets/profile/Tanya_Vaish.jpg",
     "isFounder": false,
     "department": "ZenMates"
   }
