@@ -18,7 +18,7 @@ const domains = [
     title: "Members",
     icon: Users,
     description: "Join our growing community of learners and builders. Connect, collaborate, and grow together.",
-    members: "650+",
+    members: "800+",
     skills: ["Learning Mindset", "Discussion", "Engagement", "Community Building"],
     color: "neon-green"
   },
