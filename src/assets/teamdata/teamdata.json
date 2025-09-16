@@ -202,5 +202,25 @@
     "avatar": "./assets/profile/Tanya_Vaish.jpg",
     "isFounder": false,
     "department": "ZenMates"
+  },
+  {
+    "id": "ashish-kashyap",
+    "name": "Ashish Kashyap",
+    "role": "Production Coordinator",
+    "github": "https://github.com/Ashish4922",
+    "linkedin": "https://www.linkedin.com/in/ashish-kashyap-581a84313/",
+    "avatar": "./assets/profile/AshishKashyap.jpg",
+    "isFounder": false,
+    "department": "ZenMates"
+  },
+  {
+    "id": "muskan-varshney",
+    "name": "Muskan Varshney",
+    "role": "Communication Coordinator",
+    "github": "https://github.com/muskanv26",
+    "linkedin": "https://www.linkedin.com/in/muskan-varshney-b2a9a5335",
+    "avatar": "./assets/profile/Muskan-Varshney.png",
+    "isFounder": false,
+    "department": "ZenMates"
   }
 ]
