@@ -374,7 +374,7 @@ const Hero = () => {
               className="border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white text-lg px-8 py-6 shadow-purple group"
             >
               <a
-              href="https://chat.whatsapp.com/HTwSFGYUNIb6m75IAzCxfk?mode=ac_t"
+              href="https://chat.whatsapp.com/B4zVLDm9frx92REjI9d4gO?mode=ems_copy_c"
               target="_blank"
               rel="noopener noreferrer">
               <Whatsapp className="w-5 h-5 mr-3" />
