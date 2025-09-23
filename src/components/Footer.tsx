@@ -18,7 +18,7 @@ const Footer = () => {
       { name: "Discord", href: "https://discord.gg/HuBa9r33kW" },
       { name: "Instagram", href: "https://www.instagram.com/zenyukti/" },
       { name: "LinkedIn", href: "https://linkedin.com/company/zenyukti" },
-      { name: "Whatsapp", href: "https://chat.whatsapp.com/HTwSFGYUNIb6m75IAzCxfk?mode=ac_t" },
+      { name: "Whatsapp", href: "https://chat.whatsapp.com/B4zVLDm9frx92REjI9d4gO?mode=ems_copy_c" },
     ],
     resources: [
       //{ name: "Documentation", href: "#" },
@@ -33,7 +33,7 @@ const Footer = () => {
     { icon: Github, href: "https://github.com/ZenYukti", label: "GitHub" },
     { icon: Discord, href: "https://discord.gg/HuBa9r33kW", label: "Discord" },
     { icon: Instagram, href: "https://www.instagram.com/zenyukti/", label: "Instagram" },
-    { icon: Whatsapp, href: "https://chat.whatsapp.com/HTwSFGYUNIb6m75IAzCxfk?mode=ac_t", label: "Whatsapp" },
+    { icon: Whatsapp, href: "https://chat.whatsapp.com/B4zVLDm9frx92REjI9d4gO?mode=ems_copy_c", label: "Whatsapp" },
     { icon: Linkedin, href: "https://linkedin.com/company/zenyukti", label: "LinkedIn" },
     { icon: X, href: "https://x.com/ZenYukti", label: "Twitter" },
      ];

@@ -158,7 +158,7 @@ const Community = () => {
                 className="border-primary text-primary hover:bg-primary hover:text-white"
               >
                 <a
-                  href="https://chat.whatsapp.com/HTwSFGYUNIb6m75IAzCxfk?mode=ac_t"
+                  href="https://chat.whatsapp.com/B4zVLDm9frx92REjI9d4gO?mode=ems_copy_c"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center"

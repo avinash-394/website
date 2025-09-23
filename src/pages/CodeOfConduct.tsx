@@ -370,7 +370,7 @@ const CodeOfConduct = () => {
                       </div>
                       <div className="flex items-center gap-3">
                         <Mail className="w-5 h-5 text-primary" />
-                        <span className="text-muted-foreground">Email: teamzenyukti@gmail.com</span>
+                        <span className="text-muted-foreground">Email: info@zenyukti.in</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <Shield className="w-5 h-5 text-primary" />
@@ -484,7 +484,7 @@ const CodeOfConduct = () => {
                       size="lg" 
                       variant="secondary" 
                       className="bg-white text-primary hover:bg-white/90"
-                      onClick={() => window.open('mailto:teamzenyukti@gmail.com', '_blank')}
+                      onClick={() => window.open('mailto:info@zenyukti.in', '_blank')}
                     >
                       Contact Moderators
                     </Button>
