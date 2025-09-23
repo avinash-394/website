@@ -32,7 +32,7 @@ const Community = () => {
     {
       name: "LinkedIn",
       icon: Linkedin,
-      followers: "2.5K+",
+      followers: "",
       description: "Professional updates and industry insights",
       color: "text-blue-400",
       url: "https://www.linkedin.com/company/zenyukti/",
@@ -40,7 +40,7 @@ const Community = () => {
     {
       name: "Instagram",
       icon: Instagram,
-      followers: "1.8K+",
+      followers: "",
       description: "Behind the scenes and community highlights",
       color: "text-pink-400",
       url: "https://www.instagram.com/zenyukti/",
@@ -48,7 +48,7 @@ const Community = () => {
     {
       name: "X",
       icon: X,
-      followers: "1.2K+",
+      followers: "",
       description: "Quick updates and tech discussions",
       color: "text-blue-400",
       url: "https://x.com/zenyukti",
@@ -234,11 +234,11 @@ const Community = () => {
           <div className="container mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div className="bg-card border border-border rounded-lg p-6">
-                <h3 className="text-3xl font-bold text-primary mb-2">600+</h3>
+                <h3 className="text-3xl font-bold text-primary mb-2">1000+</h3>
                 <p className="text-muted-foreground">Total Members</p>
               </div>
               <div className="bg-card border border-border rounded-lg p-6">
-                <h3 className="text-3xl font-bold text-primary mb-2">10+</h3>
+                <h3 className="text-3xl font-bold text-primary mb-2">20+</h3>
                 <p className="text-muted-foreground">Active Contributors</p>
               </div>
               <div className="bg-card border border-border rounded-lg p-6">
