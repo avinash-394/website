@@ -1,6 +1,6 @@
 <div align="center">
 
-# Zenyukti Website
+# ZenYukti Website
 
 **Modern, Fast, and Accessible Web Experience**
 
