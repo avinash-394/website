@@ -1,10 +1,10 @@
 <div align="center">
 
-# Zenyukti Website
+# ZenYukti Website
 
 **Modern, Fast, and Accessible Web Experience**
 
-[![Live Website](https://img.shields.io/badge/🌐%20Live%20Website-Visit%20Now-blue?style=for-the-badge)](https://zenyukti.github.io/)
+[![Live Website](https://img.shields.io/badge/🌐%20Live%20Website-Visit%20Now-blue?style=for-the-badge)](https://zenyukti.in/)
 [![GitHub Stars](https://img.shields.io/github/stars/ZenYukti/zenyukti.github.io?style=for-the-badge&logo=github&color=yellow)](https://github.com/ZenYukti/zenyukti.github.io/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/ZenYukti/zenyukti.github.io?style=for-the-badge&logo=github&color=green)](https://github.com/ZenYukti/zenyukti.github.io/network/members)
 [![GitHub Issues](https://img.shields.io/github/issues/ZenYukti/zenyukti.github.io?style=for-the-badge&logo=github&color=red)](https://github.com/ZenYukti/zenyukti.github.io/issues)
@@ -16,7 +16,7 @@
 
 ---
 
-**[🌟 Live Demo](https://zenyukti.github.io/) • [📚 Documentation](https://github.com/ZenYukti/zenyukti.github.io/wiki) • [🐛 Report Bug](https://github.com/ZenYukti/zenyukti.github.io/issues) • [✨ Request Feature](https://github.com/ZenYukti/zenyukti.github.io/issues)**
+**[🌟 Live Demo](https://zenyukti.in/) • [📚 Documentation](https://github.com/ZenYukti/zenyukti.github.io/wiki) • [🐛 Report Bug](https://github.com/ZenYukti/zenyukti.github.io/issues) • [✨ Request Feature](https://github.com/ZenYukti/zenyukti.github.io/issues)**
 
 </div>
 
@@ -389,14 +389,14 @@ Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information
 
 **Zenyukti Team**
 
-[![Website](https://img.shields.io/badge/Website-zenyukti.github.io-blue?style=flat-square&logo=github)](https://zenyukti.github.io/)
-[![Email](https://img.shields.io/badge/Email-teamzenyutki@gmail.com-red?style=flat-square&logo=gmail)](mailto:teamzenyutki@gmail.com)
+[![Website](https://img.shields.io/badge/Website-zenyukti.github.io-blue?style=flat-square&logo=github)](https://zenyukti.in/)
+[![Email](https://img.shields.io/badge/Email-info@zenyukti.in-red?style=flat-square&logo=gmail)](mailto:info@zenyukti.in)
 [![Twitter](https://img.shields.io/badge/Twitter-@zenyukti-1DA1F2?style=flat-square&logo=twitter)](https://twitter.com/zenyukti)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Zenyukti-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/company/zenyukti)
 
 **Project Links**
 
-[🏠 Homepage](https://zenyukti.github.io/) • [📊 Issues](https://github.com/ZenYukti/zenyukti.github.io/issues) • [🚀 Releases](https://github.com/ZenYukti/zenyukti.github.io/releases) • [📈 Insights](https://github.com/ZenYukti/zenyukti.github.io/pulse)
+[🏠 Homepage](https://zenyukti.in/) • [📊 Issues](https://github.com/ZenYukti/zenyukti.github.io/issues) • [🚀 Releases](https://github.com/ZenYukti/zenyukti.github.io/releases) • [📈 Insights](https://github.com/ZenYukti/zenyukti.github.io/pulse)
 
 </div>
 
