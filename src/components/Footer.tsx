@@ -1,4 +1,4 @@
-import { Github , Instagram , Linkedin , Whatsapp, X , Mail, Discord} from "@/components/icons";
+import { Github , Instagram , Linkedin , Whatsapp, X , Mail, Discord, Commudle} from "@/components/icons";
 //import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -19,6 +19,7 @@ const Footer = () => {
       { name: "Instagram", href: "https://www.instagram.com/zenyukti/" },
       { name: "LinkedIn", href: "https://linkedin.com/company/zenyukti" },
       { name: "Whatsapp", href: "https://chat.whatsapp.com/B4zVLDm9frx92REjI9d4gO?mode=ems_copy_c" },
+      { name: "Commudle", href: "https://www.commudle.com/communities/zenyukti" },
     ],
     resources: [
       //{ name: "Documentation", href: "#" },
@@ -36,6 +37,7 @@ const Footer = () => {
     { icon: Whatsapp, href: "https://chat.whatsapp.com/B4zVLDm9frx92REjI9d4gO?mode=ems_copy_c", label: "Whatsapp" },
     { icon: Linkedin, href: "https://linkedin.com/company/zenyukti", label: "LinkedIn" },
     { icon: X, href: "https://x.com/ZenYukti", label: "Twitter" },
+    { icon: Commudle, href: "https://www.commudle.com/communities/zenyukti", label: "Commudle" },
      ];
 
   return (
